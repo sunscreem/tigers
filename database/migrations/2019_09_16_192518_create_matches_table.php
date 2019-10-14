@@ -15,6 +15,8 @@ class CreateMatchesTable extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('location_id');
+            $table->timestamp('date')->nullable();
             $table->timestamps();
         });
     }

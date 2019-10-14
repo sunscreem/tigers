@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
-    public function player()
+    public function players()
     {
-        return Player::class();
+        return $this->hasMany('App\Player');
     }
 }
